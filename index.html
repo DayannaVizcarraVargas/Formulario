@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2>Formulario de Contacto</h2>
+    <form action="process.php" method="post">
+        <label for="nombre">Nombre y Apellidos:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+
+        <label for="ocupacion">Ocupación:</label>
+        <input type="text" id="ocupacion" name="ocupacion" required><br><br>
+
+        <label for="contacto">Contacto (teléfono, email):</label>
+        <input type="text" id="contacto" name="contacto" required><br><br>
+
+        <label for="nacionalidad">Nacionalidad:</label>
+        <select id="nacionalidad" name="nacionalidad">
+            <option value="seleccionar">Seleccionar</option>
+            <option value="espanol">Español</option>
+            <option value="ingles">Inglés</option>
+            <!-- Agrega más opciones de nacionalidad según sea necesario -->
+        </select><br><br>
+
+        <label>Nivel de inglés:</label><br>
+        <input type="radio" id="basico" name="ingles" value="basico">
+        <label for="basico">Básico</label><br>
+        <input type="radio" id="intermedio" name="ingles" value="intermedio">
+        <label for="intermedio">Intermedio</label><br>
+        <input type="radio" id="avanzado" name="ingles" value="avanzado">
+        <label for="avanzado">Avanzado</label><br>
+        <input type="radio" id="fluido" name="ingles" value="fluido">
+        <label for="fluido">Fluido</label><br><br>
+
+        <label for="lenguajes">Lenguajes de programación:</label>
+        <select id="lenguajes" name="lenguajes[]" multiple>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="csharp">C#</option>
+            <!-- Agrega más lenguajes según sea necesario -->
+        </select><br><br>
+
+        <label for="aptitudes">Aptitudes:</label>
+        <input list="aptitudes" name="aptitudes">
+        <datalist id="aptitudes">
+            <option value="Trabajo en equipo">
+            <option value="Comunicación">
+            <option value="Resolución de problemas">
+            <option value="Compañerismo">
+            <!-- Agrega más aptitudes según sea necesario -->
+        </datalist><br><br>
+
+        <label>Habilidades:</label><br>
+        <input type="checkbox" id="habilidad1" name="habilidades[]" value="habilidad1">
+        <label for="habilidad1">Sentido crítico</label><br>
+        <input type="checkbox" id="habilidad2" name="habilidades[]" value="habilidad2">
+        <label for="habilidad2">Liderazgo</label><br>
+        <input type="checkbox" id="habilidad3" name="habilidades[]" value="habilidad3">
+        <label for="habilidad3">Creatividad</label><br>
+        <input type="checkbox" id="habilidad4" name="habilidades[]" value="habilidad4">
+        <label for="habilidad4">Iniciativa y aprendizaje activo</label><br><br>
+
+        <label for="perfil">Perfil:</label><br>
+        <textarea id="perfil" name="perfil" rows="4"></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
